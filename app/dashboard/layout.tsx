@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import SideNav from "../ui/dashboard/sidenav";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -8,7 +8,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <SideNav />
       </div>
 
-      <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div>
+      <div className="flex-grow p-6 md:overflow-y-auto md:p-12">
+        <Suspense>
+          {children}
+        </Suspense>
+      </div>
     </div>
   );
 }
+
+export const experimental_ppr = true;
