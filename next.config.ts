@@ -1,9 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  experimental: {
-    cacheComponents: false,
-  }
+  // experimental: {
+  //   cacheComponents: false,
+  // }
 };
 
 export default nextConfig;
